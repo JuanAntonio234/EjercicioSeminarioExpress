@@ -29,7 +29,7 @@ const router = express.Router();
  *               properties:
  *                 message:
  *                   type: string
- *                   example: Bienvenido a la API
+ *                   example: "Bienvenido a la API"
  */
 router.get('/main', saveMethodHandler);
 
@@ -50,10 +50,13 @@ router.get('/main', saveMethodHandler);
  *             properties:
  *               name:
  *                 type: string
+ *                 example: "Juan Pérez"
  *               age:
  *                 type: integer
+ *                 example: 30
  *               email:
  *                 type: string
+ *                 example: "juan.perez@example.com"
  *     responses:
  *       201:
  *         description: Usuario creado exitosamente
@@ -78,12 +81,15 @@ router.post('/users', createUserHandler);
  *               items:
  *                 type: object
  *                 properties:
- *                  name:
+ *                   name:
  *                     type: string
- *                  age:
- *                    type: integer
- *                  email:
+ *                     example: "Juan Pérez"
+ *                   age:
+ *                     type: integer
+ *                     example: 30
+ *                   email:
  *                     type: string
+ *                     example: "juan.perez@example.com"
  */
 router.get('/users', getAllUsersHandler);
 
@@ -101,6 +107,7 @@ router.get('/users', getAllUsersHandler);
  *         required: true
  *         schema:
  *           type: string
+ *           example: "60d1b2f8f8b3d6c3e8f9a9a0"
  *     responses:
  *       200:
  *         description: Éxito
@@ -109,12 +116,15 @@ router.get('/users', getAllUsersHandler);
  *             schema:
  *               type: object
  *               properties:
- *                  name:
+ *                 name:
  *                   type: string
+ *                   example: "Juan Pérez"
  *                 age:
  *                   type: integer
+ *                   example: 30
  *                 email:
- *                    type: string
+ *                   type: string
+ *                   example: "juan.perez@example.com"
  *       404:
  *         description: Usuario no encontrado
  */
@@ -134,6 +144,7 @@ router.get('/users/:id', getUserByIdHandler);
  *         required: true
  *         schema:
  *           type: string
+ *           example: "60d1b2f8f8b3d6c3e8f9a9a0"
  *     requestBody:
  *       required: true
  *       content:
@@ -141,12 +152,15 @@ router.get('/users/:id', getUserByIdHandler);
  *           schema:
  *             type: object
  *             properties:
- *                 name:
- *                   type: string
- *                 age:
- *                   type: integer
- *                 email:
- *                    type: string
+ *               name:
+ *                 type: string
+ *                 example: "Juan Pérez"
+ *               age:
+ *                 type: integer
+ *                 example: 31
+ *               email:
+ *                 type: string
+ *                 example: "juan.perez@newemail.com"
  *     responses:
  *       200:
  *         description: Usuario actualizado exitosamente
@@ -169,6 +183,7 @@ router.put('/users/:id', updateUserHandler);
  *         required: true
  *         schema:
  *           type: string
+ *           example: "60d1b2f8f8b3d6c3e8f9a9a0"
  *     responses:
  *       200:
  *         description: Usuario eliminado exitosamente
