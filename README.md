@@ -46,4 +46,9 @@ http://localhost:9000/api-docs
 - `@types/*`: Definicions de tipus per a biblioteques utilitzades.
 
 
+## Recursos y Referencias
+## Uso de ChatGPT
+
+Para completar el concepto de como implementar un array de objectID.
+Los otros materiales utilizados han sido los usados para preparar el seminario.
 
