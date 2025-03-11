@@ -1,3 +1,4 @@
+import mongoose from "mongoose";
 import {ISubject, subjectModel, subjectSchema} from "../subjects/subject_model.js"
 
 export const getEntry = {
@@ -23,14 +24,20 @@ export const getEntry = {
     
     updateSubject : async(id:string,updateData:Partial<ISubject>) => {
         try{
-        const updatedSubject = await subjectModel.findByIdAndUpdate(
-                       id,
-                       { $set: updateData },
-                       { new: true, runValidators: true }
-                   );
-                }catch(error){
-                    console.error("Error en updateSubject:", error);
-                }
+            
+            const updateQuery :any={};
+            if(updateData.students){
+                updateData.students=updateData.students.map(studentId=>
+                    new mongoose.Types.ObjectId(String(studentId))
+                );
+            }
+            return await subjectModel.updateOne(
+                       {_id: id },
+                       { $set: updateData }                   
+                    );
+        }catch(error){
+            console.error("Error en updateSubject:", error);
+        }
            },
     deleteSubject : async(id: string) => {
         return await subjectModel.deleteOne({_id: id});

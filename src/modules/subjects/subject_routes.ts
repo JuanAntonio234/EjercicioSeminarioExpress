@@ -104,9 +104,10 @@ router.get('/subjects',getSubjects);
  */
 router.get('/subject/:id/students', getUsersSubject);
 
+
 /**
  * @swagger
- * /subjects/{id}:
+ * /api/subjects/{id}:
  *   put:
  *     summary: Actualizar una asignatura por ID
  *     description: Permite actualizar los datos de una asignatura existente

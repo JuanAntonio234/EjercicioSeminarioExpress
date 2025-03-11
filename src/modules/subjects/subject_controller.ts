@@ -44,18 +44,11 @@ export const getUsersSubject = async (req: Request, res: Response) => {
         res.status(500).json({ message: "Error al obtener los datos", error });
     }
 }
-
+//
 export const updateSubject = async (req: Request, res: Response) => {
     try{
-        const { id } = req.params; 
-        const updateData = req.body;
-
-        if (!id) {
-            return res.status(400).json({ message: "El id es incorrecto o no existe." });
-        }
-        
-        const updatedSubject = await getEntry.updateSubject(id, updateData);
-        return res.status(200).json({ message: "Asignatura actualizada", updatedSubject });
+         const updateData = await getEntry.updateSubject(req.params.id, req.body);        
+        return res.status(200).json({ message: "Asignatura actualizada" });
     }catch(error){
         return res.status(500).json({ message: "Error al actualizar la asignatura",});
 
