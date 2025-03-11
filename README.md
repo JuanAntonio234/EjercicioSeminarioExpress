@@ -52,4 +52,5 @@ http://localhost:9000/api-docs
 -Para completar el concepto de como implementar un array de objectID.
 ##
 -Los otros materiales utilizados han sido los usados para preparar el seminario.
-
+##Errores
+- Al actualizar, los estudiantes no se añaden, sino que se sobreescribe. Los demás campos sí se actualizan sin problemas.
