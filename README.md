@@ -47,8 +47,9 @@ http://localhost:9000/api-docs
 
 
 ## Recursos y Referencias
-## Uso de ChatGPT
 
-Para completar el concepto de como implementar un array de objectID.
-Los otros materiales utilizados han sido los usados para preparar el seminario.
+## Uso de ChatGPT
+-Para completar el concepto de como implementar un array de objectID.
+##
+-Los otros materiales utilizados han sido los usados para preparar el seminario.
 
